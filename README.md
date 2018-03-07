@@ -1,4 +1,5 @@
 # vue-practise by JirayuL
+In this summer, I will internship at [Sellsuki](http://www.sellsuki.co.th) and this Co. use Vue framework as main framework so I have to learn about this framework before I go to internship there.
 ## Declarative Rendering
 The `v-bind` attribute you are seeing is called a **directive**. **Directives** are prefixed with **v-** to indicate that they are special attributes provided by Vue, and as you may have guessed, they apply special reactive behavior to the rendered DOM. Here, it is basically saying “keep this element’s title attribute up-to-date with the message property on the Vue instance.”
 ```html
