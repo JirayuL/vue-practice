@@ -90,3 +90,5 @@ var app6 = new Vue({
   }
 })
 ```
+### Reference
+https://vuejs.org/v2/guide/index.html
