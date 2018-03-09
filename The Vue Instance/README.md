@@ -1,3 +1,4 @@
+# The Vue Instance
 ## Creating a Vue Instance
 Every Vue application starts by creating a new **Vue instance** with the `Vue` function:
 ```JavaScript
