@@ -90,5 +90,12 @@ var app6 = new Vue({
   }
 })
 ```
+## Creating a Vue Instance
+Every Vue application starts by creating a new **Vue instance** with the `Vue` function:
+```JavaScript
+var vm = new Vue({
+  // options
+})
+```
 ### Reference
 https://vuejs.org/v2/guide/index.html
