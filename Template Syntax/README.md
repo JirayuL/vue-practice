@@ -32,3 +32,22 @@ In the case of boolean attributes, where their mere existence implies `true`, `v
 <button v-bind:disabled="isButtonDisabled">Button</button>
 ```
 If isButtonDisabled has the value of `null`, `undefined`, or `false`, the `disabled` attribute will not even be included in the rendered `<button>` element.
+#### Using JavaScript Expressions
+Vue.js supports the full power of JavaScript expressions inside all data bindings:
+```HTML
+{{ number + 1 }}
+
+{{ ok ? 'YES' : 'NO' }}
+
+{{ message.split('').reverse().join('') }}
+
+<div v-bind:id="'list-' + id"></div>
+```
+These expressions will be evaluated as JavaScript in the data scope of the owner Vue instance. One restriction is that each binding can only contain **one single expression**, so the following will **NOT** work:
+```HTML
+<!-- this is a statement, not an expression: -->
+{{ var a = 1 }}
+
+<!-- flow control won't work either, use ternary expressions -->
+{{ if (ok) { return message } }}
+```
