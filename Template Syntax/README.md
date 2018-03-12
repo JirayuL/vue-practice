@@ -22,3 +22,13 @@ The double mustaches interprets the data as plain text,**not HTML**. In order to
 <p>Using v-html directive: <span v-html="rawHtml"></span></p>
 ```
 The contents of the `span` will be replaced with the value of the `rawHtml` property, interpreted as plain HTML - data bindings are ignored. Note that you cannot use `v-html` to compose template partials, because Vue is not a string-based templating engine. Instead, components are preferred as the fundamental unit for UI reuse and composition.
+#### Attributes
+Mustaches cannot be used inside HTML attributes. Instead, use a **v-bind directive**:
+```HTML
+<div v-bind:id="dynamicId"></div>
+```
+In the case of boolean attributes, where their mere existence implies `true`, `v-bind` works a little differently. In this example:
+```HTML
+<button v-bind:disabled="isButtonDisabled">Button</button>
+```
+If isButtonDisabled has the value of `null`, `undefined`, or `false`, the `disabled` attribute will not even be included in the rendered `<button>` element.
