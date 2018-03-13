@@ -68,3 +68,9 @@ Another example is the `v-on` directive, which listens to DOM events:
 <a v-on:click="doSomething"> ... </a>
 ```
 Here the argument is the event name to listen to. We will talk about event handling in more detail too.
+#### Modifiers
+Modifiers are special postfixes denoted by a dot, which indicate that a directive should be bound in some special way. For example, the `.prevent` modifier tells the `v-on` directive to call `event.preventDefault()` on the triggered event:
+```HTML
+<form v-on:submit.prevent="onSubmit"> ... </form>
+```
+You’ll see other examples of modifiers later, for v-on and for v-model, when we explore those features.
