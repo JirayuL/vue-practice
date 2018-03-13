@@ -53,3 +53,18 @@ These expressions will be evaluated as JavaScript in the data scope of the owner
 ```
 ## Directives
 Directives are special attributes with the `v-` prefix. Directive attribute values are expected to be **a single JavaScript expression** (with the exception for `v-for`, which will be discussed later). A directive’s job is to reactively apply side effects to the DOM when the value of its expression changes. Let’s review the example we saw in the introduction:
+```HTML
+<p v-if="seen">Now you see me</p>
+```
+Here, the `v-if` directive would remove/insert the `<p>` element based on the truthiness of the value of the expression `seen`.
+#### Arguments
+Some directives can take an “argument”, denoted by a colon after the directive name. For example, the `v-bind` directive is used to reactively update an HTML attribute:
+```HTML
+<a v-bind:href="url"> ... </a>
+```
+Here `href` is the argument, which tells the `v-bind` directive to bind the element’s `href` attribute to the value of the expression `url`.
+Another example is the `v-on` directive, which listens to DOM events:
+```HTML
+<a v-on:click="doSomething"> ... </a>
+```
+Here the argument is the event name to listen to. We will talk about event handling in more detail too.
