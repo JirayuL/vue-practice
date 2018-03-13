@@ -51,3 +51,5 @@ These expressions will be evaluated as JavaScript in the data scope of the owner
 <!-- flow control won't work either, use ternary expressions -->
 {{ if (ok) { return message } }}
 ```
+## Directives
+Directives are special attributes with the `v-` prefix. Directive attribute values are expected to be **a single JavaScript expression** (with the exception for `v-for`, which will be discussed later). A directive’s job is to reactively apply side effects to the DOM when the value of its expression changes. Let’s review the example we saw in the introduction:
