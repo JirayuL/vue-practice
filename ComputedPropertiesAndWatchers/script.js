@@ -9,12 +9,12 @@ var vm = new Vue({
       // `this` points to the vm instance
       return this.message.split('').reverse().join('')
     }
+  },
+  methods: {
+    now: function() {
+      return Date.now()
+    }
   }
-  // methods: {
-  //   now: function() {
-  //     return Date.now()
-  //   }
-  // }
 
 
 })
