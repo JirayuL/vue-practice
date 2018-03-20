@@ -74,3 +74,22 @@ Modifiers are special postfixes denoted by a dot, which indicate that a directiv
 <form v-on:submit.prevent="onSubmit"> ... </form>
 ```
 You’ll see other examples of modifiers later, for v-on and for v-model, when we explore those features.
+## Shorthands
+The `v-` prefix serves as a visual cue for identifying Vue-specific attributes in your templates. This is useful when you are using Vue.js to apply dynamic behavior to some existing markup, but can feel verbose for some frequently used directives. At the same time, the need for the `v-` prefix becomes less important when you are building a **SPA** where Vue.js manages every template. Therefore, Vue.js provides special shorthands for two of the most often used directives, v-bind and v-on:
+#### `v-bind` Shorthand
+```HTML
+<!-- full syntax -->
+<a v-bind:href="url"> ... </a>
+
+<!-- shorthand -->
+<a :href="url"> ... </a>
+```
+#### `v-on` Shorthand
+```HTML
+<!-- full syntax -->
+<a v-on:click="doSomething"> ... </a>
+
+<!-- shorthand -->
+<a @click="doSomething"> ... </a>
+```
+They may look a bit different from normal HTML, but `:` and `@` are valid chars for attribute names and all Vue.js supported browsers can parse it correctly. In addition, they do not appear in the final rendered markup. The shorthand syntax is totally optional, but you will likely appreciate it when you learn more about its usage later.
