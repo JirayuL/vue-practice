@@ -10,4 +10,5 @@ var vm = new Vue({
       return this.message.split('').reverse().join('')
     }
   }
+
 })
