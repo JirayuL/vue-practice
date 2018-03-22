@@ -5,6 +5,7 @@ In this summer, I will internship at [Sellsuki Co. Ltd.](http://www.sellsuki.co.
 * [The Vue Instance](https://github.com/JirayuL/vue-practice/tree/master/The%20Vue%20Instance)
 * [Template Syntax](https://github.com/JirayuL/vue-practice/tree/master/Template%20Syntax)
 * [Computed Properties and Watchers](https://github.com/JirayuL/vue-practice/tree/master/ComputedPropertiesAndWatchers)
+* [Class and Style Bindings](https://github.com/JirayuL/vue-practice/tree/master/Class%20and%20Style%20Bindings)
 
 ## Reference
 * [Vue.js](https://vuejs.org/v2/guide/index.html)
