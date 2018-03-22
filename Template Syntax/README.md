@@ -4,7 +4,7 @@ Vue.js uses an HTML-based template syntax that allows declaratively bind the ren
  Vue is able to intelligently figure out the minimal number of components to re-render and apply the minimal amount of DOM manipulations when the app state changes.
 
 ## Interpolations
-#### Text
+### Text
 The most basic form of data binding is text interpolation using the “Mustache” syntax (double curly braces):
 ```html
 <span>Message: {{ msg }}</span>
@@ -15,14 +15,14 @@ You can also perform one-time interpolations that do not update on data change b
 ```HTML
 <span v-once>This will never change: {{ msg }}</span>
 ```
-#### Raw HTML
+### Raw HTML
 The double mustaches interprets the data as plain text,**not HTML**. In order to output real HTML, you will need to use the `v-html` directive:
 ```HTML
 <p>Using mustaches: {{ rawHtml }}</p>
 <p>Using v-html directive: <span v-html="rawHtml"></span></p>
 ```
 The contents of the `span` will be replaced with the value of the `rawHtml` property, interpreted as plain HTML - data bindings are ignored. Note that you cannot use `v-html` to compose template partials, because Vue is not a string-based templating engine. Instead, components are preferred as the fundamental unit for UI reuse and composition.
-#### Attributes
+### Attributes
 Mustaches cannot be used inside HTML attributes. Instead, use a **v-bind directive**:
 ```HTML
 <div v-bind:id="dynamicId"></div>
@@ -32,7 +32,7 @@ In the case of boolean attributes, where their mere existence implies `true`, `v
 <button v-bind:disabled="isButtonDisabled">Button</button>
 ```
 If isButtonDisabled has the value of `null`, `undefined`, or `false`, the `disabled` attribute will not even be included in the rendered `<button>` element.
-#### Using JavaScript Expressions
+### Using JavaScript Expressions
 Vue.js supports the full power of JavaScript expressions inside all data bindings:
 ```HTML
 {{ number + 1 }}
@@ -57,7 +57,7 @@ Directives are special attributes with the `v-` prefix. Directive attribute valu
 <p v-if="seen">Now you see me</p>
 ```
 Here, the `v-if` directive would remove/insert the `<p>` element based on the truthiness of the value of the expression `seen`.
-#### Arguments
+### Arguments
 Some directives can take an “argument”, denoted by a colon after the directive name. For example, the `v-bind` directive is used to reactively update an HTML attribute:
 ```HTML
 <a v-bind:href="url"> ... </a>
@@ -68,7 +68,7 @@ Another example is the `v-on` directive, which listens to DOM events:
 <a v-on:click="doSomething"> ... </a>
 ```
 Here the argument is the event name to listen to. We will talk about event handling in more detail too.
-#### Modifiers
+### Modifiers
 Modifiers are special postfixes denoted by a dot, which indicate that a directive should be bound in some special way. For example, the `.prevent` modifier tells the `v-on` directive to call `event.preventDefault()` on the triggered event:
 ```HTML
 <form v-on:submit.prevent="onSubmit"> ... </form>
@@ -76,7 +76,7 @@ Modifiers are special postfixes denoted by a dot, which indicate that a directiv
 You’ll see other examples of modifiers later, for v-on and for v-model, when we explore those features.
 ## Shorthands
 The `v-` prefix serves as a visual cue for identifying Vue-specific attributes in your templates. This is useful when you are using Vue.js to apply dynamic behavior to some existing markup, but can feel verbose for some frequently used directives. At the same time, the need for the `v-` prefix becomes less important when you are building a **SPA** where Vue.js manages every template. Therefore, Vue.js provides special shorthands for two of the most often used directives, v-bind and v-on:
-#### `v-bind` Shorthand
+### `v-bind` Shorthand
 ```HTML
 <!-- full syntax -->
 <a v-bind:href="url"> ... </a>
@@ -84,7 +84,7 @@ The `v-` prefix serves as a visual cue for identifying Vue-specific attributes i
 <!-- shorthand -->
 <a :href="url"> ... </a>
 ```
-#### `v-on` Shorthand
+### `v-on` Shorthand
 ```HTML
 <!-- full syntax -->
 <a v-on:click="doSomething"> ... </a>
